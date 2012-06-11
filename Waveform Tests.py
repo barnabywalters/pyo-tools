@@ -23,7 +23,7 @@ pitch = MToF(midi['pitch'])
 
 # Table
 wave1 = DataTable(1)
-wave1.read(os.path.expanduser('~/create_met_temp_curve_table.txt'))
+wave1.read(os.path.expanduser('./waveforms/create_met_temp_curve_table.txt'))
 wave1.normalize()
 
 wave2 = SquareTable()
