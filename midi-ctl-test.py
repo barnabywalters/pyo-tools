@@ -1,0 +1,11 @@
+from pyo import *
+s = Server()
+s.setMidiInputDevice(2)
+s.boot()
+s.start()
+m = Midictl(ctlnumber=[28,31], minscale=250, maxscale=1000)
+p = Port(m, .02)
+a = Sine(freq=p, mul=.3).out()
+a1 = Sine(freq=p*1.25, mul=.3).out()
+a2 = Sine(freq=p*1.5, mul=.3).out()
+s.gui(locals())
